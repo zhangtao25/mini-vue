@@ -1,55 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>tiny vue</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
-    <div id="app">
-        <p>{{name}}</p>
-        <p>{{wife.name}}</p>
-        <p v-text='name'></p>
-        <p v-text='wife.name'></p>
-        <p v-html='tag'></p>
-        <button @click='changeName'>更sss新</button> <br/>
-
-        <input type="text" v-model='name'> <br/>
-
-        <input type="text" v-model='wife.name'> <br/>
-    </div>
-    <!-- <script src="./vue.js"></script> -->
-    <script src="./vue-modular-comments.js"></script>
-
-
-    <script>
-        const vm = new Vue({
-            el: '#app',
-            data: {
-                name: 'Jack',
-                wife: {
-                    name: 'Anna',
-                    age: 18
-                },
-                tag: '<a href="https://www.baidu.com/">百度一下</a>',
-                inputText: 'init text'
-            },
-            methods: {
-                changeName() {
-                    this.name = 'Jack Zing';
-                    this.tag = '<a href="https://sina.cn/">新浪</a>';
-                    this.wife.name = 'Lucy';
-                }
-            }
-        });
-/*
-        console.log(vm.name);
-        vm.name = 'Jack Zing';
-        console.log(vm.name);
-
-        console.log(vm.wife.name);
-        vm.wife.name = 'Lucy';
-        console.log(vm.wife.name);
-        */
-    </script>
+<div id='app'>{{name}}</div>
 </body>
+<script src="./vue-tao.js"></script>
+<!--<script src="./vue.js"></script>-->
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'Jack'
+        }
+    });
+</script>
 </html>
